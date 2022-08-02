@@ -4,7 +4,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import viachips from '../public/images/works/via_chips.jpg'
-import helicopter from '../public/images/works/4th-iteration.jpg'
+import helicopter from '../public/images/works/helicopter.jpg'
 import modelrocket from '../public/images/works/modelrocket.png'
 
 const Works = () => (
@@ -17,7 +17,7 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem id="viachips" title="Secondary Phone Screen" thumbnail={viachips}>
-            A Secondary phone screen accessory that boosts productivity and media consumption. (WIP)
+            (WIP) A Secondary phone screen accessory that boosts productivity and media consumption.
           </WorkGridItem>
         </Section>
         <Section>

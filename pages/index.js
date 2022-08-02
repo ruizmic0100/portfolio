@@ -12,11 +12,11 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
+import GifHidder from '/components/gif-hidder'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -24,16 +24,25 @@ const ProfileImage = chakra(Image, {
 
 const Home = () => (
   <Layout>
+    <Box
+        borderRadius="lg"
+        mb={6}
+        p={3}
+        w="500px"
+        h="5px" 
+        display="inline-block"
+    >
+    </Box>
     <Container>
       <Box
         borderRadius="lg"
         mb={6}
         p={3}
         w="500px"
-        h="80px"
+        h="100px"
         textAlign="center"
       >
-        <Image src='/images/cars-portfosddlio-1.png' alt='car-voxel-model' width={788} height={159} />
+        <Image src='/images/cars-portfosddlio-1.png' alt='car-voxel-model' width={688} height={159} />
       </Box>
       <Box
         borderRadius="lg"
@@ -51,6 +60,7 @@ const Home = () => (
             Michael Ruiz
           </Heading>
           <p>( Prototyper / Developer / Designer )</p>
+          <GifHidder />
         </Box>
         <Box
           flexShrink={0}
@@ -62,8 +72,8 @@ const Home = () => (
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w="160px"
+            h="160px"
             display="inline-block"
             borderRadius="full"
             overflow='hidden'
@@ -72,8 +82,8 @@ const Home = () => (
               src="/images/michael.jpg"
               alt="Profile image"
               borderRadius='full'
-              width="100%"
-              height="100%"
+              width="160%"
+              height="160%"
             />
           </Box>
         </Box>
@@ -81,14 +91,13 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About
         </Heading>
         <Paragraph>
-          Michael is a Software Engineer interested in Mechatronics based in Texas with a
-          passion for building hardware solutions than can help people. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, his days
-          are full of building his projects and trying to satisfy his insatiable curiosity.
+          I am a computer engineer based in Texas with a
+          passion for building hardware/software solutions than can help people. I am fully committed to the philosophy of life-long learning.
+          I have a deep passion for embedded systems, AI, and cyber security. Being able to use my creativity and logic on technology drives my excitement for technology. 
+          When not online, my days are full of building my projects, keeping fit, and playing guitar.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
@@ -97,21 +106,6 @@ const Home = () => (
             </Button>
           </NextLink>
         </Box>
-      </Section>
-
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1999</BioYear>
-          Born in Texas.
-        </BioSection>
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Currently a Senior for Computer Engineering at the University
-          of Texas at San Antonio.
-        </BioSection>
       </Section>
 
       <Section delay={0.3}>
